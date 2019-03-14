@@ -72,5 +72,5 @@ def hc_generator(genesis, order, destination):
 
 
 if __name__ == '__main__':
-    tape = hc_generator(['odru'], 6, 'test_table.txt')
+    tape = hc_generator(['odru'], 4, 'test_table.txt')
     print(tape)
