@@ -4,4 +4,4 @@
 from sfcpy import DATA_PATH
 
 def data(filename):
-    return DATA_PATH+filename
+    return str(DATA_PATH+filename)

@@ -1,3 +1,4 @@
+import os
 import matplotlib.pyplot as plt
 import numpy as np
 
@@ -48,8 +49,11 @@ def hc_builder(genesis):
     yield tape
 
 
-def hc_generator(genesis, order):
+def hc_generator(genesis, order, destination):
     tape = ''
+
+    if os.path.isfile(destination):
+        os.remove(destination)
 
     for lv in range(1, order):
         tape = ''
@@ -59,9 +63,7 @@ def hc_generator(genesis, order):
             tape += ''.join([*sub_tape])
             genesis = split_seq(tape)
 
-        print(label_order)
-        print(tape)
-        with open('hc_lookup.txt', 'a') as file:
+        with open(destination, 'a') as file:
             file.writelines(label_order)
             file.writelines(tape)
             file.writelines('\n')
@@ -70,5 +72,5 @@ def hc_generator(genesis, order):
 
 
 if __name__ == '__main__':
-    tape = hc_generator(['odru'], 10)
+    tape = hc_generator(['odru'], 6, 'test_table.txt')
     print(tape)
