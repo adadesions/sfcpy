@@ -13,7 +13,7 @@ with open(os.path.join(HERE, "README.md")) as fid:
 # This call to setup() does all the work
 setup(
     name="sfcpy",
-    version="1.2.0",
+    version="1.2.1",
     description="Space-Filling Curve library for image-processing tasks",
     long_description=README,
     long_description_content_type="text/markdown",
