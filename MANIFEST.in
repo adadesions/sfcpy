@@ -1,1 +1,2 @@
 include sfcpy/*.txt
+include dataset/*.jpg
