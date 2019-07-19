@@ -1,6 +1,8 @@
+'''
+Hilbert Curve Generator
+'''
+
 import os
-import matplotlib.pyplot as plt
-import numpy as np
 
 inverse_table = {
     'd': 'u', 'u': 'd',
@@ -72,5 +74,5 @@ def hc_generator(genesis, order, destination):
 
 
 if __name__ == '__main__':
-    tape = hc_generator(['odru'], 4, 'test_table.txt')
-    print(tape)
+    the_tape = hc_generator(['odru'], 4, 'test_table.txt')
+    print(the_tape)

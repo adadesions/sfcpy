@@ -98,8 +98,3 @@ tape_reader = {
     'r': lambda step: right(step),
     'o': lambda step: tuple(step),
 }
-
-
-if __name__ == '__main__':
-    hc_tape = get_hc_tape(2)
-    print(hc_tape)
