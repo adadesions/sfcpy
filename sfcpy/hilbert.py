@@ -9,7 +9,7 @@ from sfcpy import HC_TABLE_PATH
 def read_hc_tape(file_path, order=2):
     """
     read_hc_tape :Read Hilbert Curve command from the table
-    
+
     Read Hilbert Curve command from the table in this package.
     The command including these English alphabet {'o', 'u', 'd', 'l', 'r'}
 
@@ -40,9 +40,9 @@ def read_hc_tape(file_path, order=2):
 def get_hc_tape(order=2):
     """
     get_hc_tape :a function that call read_hc_tape function
-    
+
     The short hand version of read_hc_tape function
-    
+
     :param order: Hilbert curve's order ,defaults to 2
     :param order: int, optional
     :return: Hilbert curve string tape
@@ -58,9 +58,9 @@ def get_hc_tape(order=2):
 def prepare_image(img_path):
     """
     prepare_image :To prepare image for multi-resoluition analysis
-    
+
     To transform image to multi-resolution by Pyramid method
-    
+
     :param img_path: path of image
     :type img_path: string
     :return: list of transformed images
@@ -79,14 +79,22 @@ def prepare_image(img_path):
 
 
 # Hilber Curve functional utilities
-left = lambda point: (point[0]-1, point[1])
-right = lambda point: (point[0]+1, point[1])
-up = lambda point: (point[0], point[1]-1)
-down = lambda point: (point[0], point[1]+1)
+def left(point): return (point[0]-1, point[1])
+
+
+def right(point): return (point[0]+1, point[1])
+
+
+def up(point): return (point[0], point[1]-1)
+
+
+def down(point): return (point[0], point[1]+1)
+
+
 tape_reader = {
-    'u': lambda step: up(step), 
-    'd': lambda step: down(step), 
-    'l': lambda step: left(step), 
+    'u': lambda step: up(step),
+    'd': lambda step: down(step),
+    'l': lambda step: left(step),
     'r': lambda step: right(step),
     'o': lambda step: tuple(step),
 }
