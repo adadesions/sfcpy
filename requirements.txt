@@ -16,7 +16,7 @@ networkx==2.2
 numpy==1.16.0
 Pillow==5.4.1
 pluggy==0.8.1
-py==1.7.0
+py==1.10.0
 pydicom==1.2.2
 pylint==2.2.2
 pyparsing==2.3.1
