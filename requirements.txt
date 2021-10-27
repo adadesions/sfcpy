@@ -4,7 +4,7 @@ attrs==18.2.0
 bumpversion==0.5.3
 cloudpickle==0.8.0
 cycler==0.10.0
-dask==1.1.4
+dask==2021.10.0
 decorator==4.3.2
 isort==4.3.4
 kiwisolver==1.0.1
